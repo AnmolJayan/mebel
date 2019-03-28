@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login to The Computer Store</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shop for Computer Parts" />
+    <meta name="keywords" content="computer,parts,hardware" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <style>
+    .lform {
+        width: 800px;
+        padding: 30px 40px 40px;
+        margin: 40px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <ul class="topnav">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="form.php">Register</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li class="right"><a href="about.html">About</a></li>
+    </ul>
+    <div class="design">
+        <br />
+        <div class="lform">
+            <form name="login" action="login.php" method="post">
+                <table>
+                    <caption>Login</caption>
+                    <tr>
+                        <td>
+                            <label for="user">Username: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="username" id="username" size="12" maxlength="20" minlength="3" placeholder="Enter Username" pattern="[A-Za-z0-9]{3,20}" title="Only alphanumeric input" required autofocus />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password: </label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="password" size="12" maxlength="256" placeholder="Enter Password" pattern=".{8,}" title="Must contain at least 8 characters" required />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

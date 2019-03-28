@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shop for Computer Parts" />
+    <meta name="keywords" content="computer,parts,hardware" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <style>
+    .rform {
+        width: 800px;
+        padding: 30px 40px 40px;
+        margin: 40px auto;
+    }
+    
+    select {
+        background-color: #333536;
+    }
+    
+    button {
+        all: initial;
+        * {
+            all: unset;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <ul class="topnav">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="form.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li class="right"><a href="about.html">About</a></li>
+    </ul>
+    <div class="rform">
+        <form name="register" action="form.php" method="post">
+            <table>
+                <caption>Registration Form</caption>
+                <tr>
+                    <td>
+                        <label for="name">Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" size="12" maxlength="60" placeholder="Enter Full Name" pattern="[A-Za-z ]*" required autofocus />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="user">Username: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="user" id="user" size="12" maxlength="20" minlength="3" placeholder="Choose Username" pattern="[A-Za-z0-9]{3,20}" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass" id="pass" size="12" maxlength="256" placeholder="Enter New Password" pattern=".{8,15}" title="Must contain at least 8 characters or atmost 15 characters" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Confirm Password: </label>
+                    </td>
+                    <td>
+                        <script type="text/javascript">
+                        function validater() {
+                            var p1 = document.register.pass.value;
+                            var p2 = document.register.cpass.value;
+                            if (p1 != p2) {
+                                alert("Password does not match");
+                                document.myform.cpass.focus();
+                                return false;
+                            }
+                        }
+                        </script>
+                        <input type="password" name="cpass" id="cpass" onchange="validater()" size="12" maxlength="256" placeholder="Confirm Password" pattern=".{8,}" title="Must contain at least 8 characters" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email Id: </label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" size="12" maxlength="256" placeholder="Enter Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Phone: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="phone" id="phone" size="12" maxlength="12" placeholder="Enter Contact Number" pattern="[0-9]{8,10}" title="Must be 10 digits" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Address: </label>
+                    </td>
+                    <td>
+                        <textarea name="address" id="address" rows="6" cols="50" wrap="hard" placeholder="Enter Delivery Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City: </td>
+                    <td>
+                        <select name="city">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Usage: </td>
+                    <td>
+                        <input type="radio" name="usg" id="Home" value="Home">
+                        <label for="Home">Home</label>
+                        <input type="radio" name="usg" id="Student" value="Student" checked>
+                        <label for="Student">Student</label>
+                        <input type="radio" name="usg" id="Professional" value="Professional">
+                        <label for="Professional">Professional</label>
+                    </td>
+                </tr>
+            </table>
+            <div class="button_wrap">
+                <button class="btn" value="submit"><span>SUBMIT</span></button>
+                <button class="btn"  type="reset"value="reset"><span>RESET</span></button>
+            </div>
+        </form>
+    </div>
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="mailto:contact?subject=Feedback" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="#top" class="icon fa-arrow-up"><span class="label">Top</span></a></li>
+            </ul>
+            <p class="copyright">&copy; 2017 
+                <br />This is a copyright product. All rights reserved
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
